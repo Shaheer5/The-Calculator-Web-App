@@ -169,8 +169,12 @@ Array.from(buttons).forEach( button => {
         inputField.value = string;
 
         equalBtn.addEventListener('click', () => {
-            string = eval(string);
-            inputField.value = string;
+            if (inputField.innerText.contains = '..') {
+                inputField.value = "Syntax Error";
+            } else {
+                string = eval(string);
+                inputField.value = string;
+            }
         });
 
         resetBtn.addEventListener('click', () => {
@@ -180,8 +184,10 @@ Array.from(buttons).forEach( button => {
 
 
         delBtn.addEventListener('click', () => {
-            string = string.innerText.substr(0,string.innerText.length-1);
-            inputField.value = string;
+            // Calculator.Input.value= Calculator.Input.value.substring(0,Calculator.Input.value.length-1)
+            // inputField.value = inputField.value.substring(0,inputField.value.length-1);
+            inputField.value = inputField.value.slice(0, -1);
+            // inputField.value = string;
         });
     });
 });
