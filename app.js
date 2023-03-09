@@ -7,7 +7,7 @@ const toggler3 = document.querySelector('#third');
 const body = document.querySelector('body');
 const switchBody = document.querySelector('.switch-body');
 const switchSlider = document.querySelector('.switch-slider');
-const inputField = document.querySelector('#input-number');
+let inputField = document.getElementById('input-number');
 const numpadBG = document.querySelector('#numpad-bg');
 const delBtn = document.querySelector('#del');
 const resetBtn = document.querySelector('#reset');
@@ -155,4 +155,33 @@ toggler3.addEventListener('click', e => {
 });
 
 
-// buttonTop.className += " myButton myStyle";
+// Actual Working of the Calculator
+
+let string = "";
+let buttons = document.querySelectorAll('.numpad-numbers');
+
+Array.from(buttons).forEach( button => {
+    button.addEventListener('click', e => {
+        e.preventDefault();
+
+        console.log(e.target);
+        string += e.target.innerHTML;
+        inputField.value = string;
+
+        equalBtn.addEventListener('click', () => {
+            string = eval(string);
+            inputField.value = string;
+        });
+
+        resetBtn.addEventListener('click', () => {
+            string = '';
+            inputField.value = string;
+        });
+
+
+        delBtn.addEventListener('click', () => {
+            string = string.innerText.substr(0,string.innerText.length-1);
+            inputField.value = string;
+        });
+    });
+});
