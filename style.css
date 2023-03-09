@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;700&display=swap');
+
+:root {
+    --main-bg : hsl(222, 26%, 31%);
+    --pad-bg: hsl(223, 31%, 20%);
+    --input-bg : hsl(224, 36%, 15%);
+
+    --reset-bg: hsl(225, 21%, 49%);
+    --reset-shadow: hsl(224, 28%, 35%);
+
+    --equal-bg: hsl(6, 63%, 50%);
+    --equal-shadow: hsl(6, 70%, 34%);
+
+    --btn-bg: hsl(30, 25%, 89%);
+    --btn-shadow: hsl(28, 16%, 65%);
+
+    --text-gray: hsl(221, 14%, 31%);
+    --text-white: hsl(0, 0%, 100%);
+
+    /* Second Theme -------------------------------- */
+
+    --main2-bg: hsl(0, 0%, 90%);
+    --pad2-bg: hsl(0, 5%, 81%);
+    --input2-bg: hsl(0, 0%, 93%);
+
+
+    --reset2-bg: hsl(185, 42%, 37%);
+    --reset2-shadow: hsl(185, 58%, 25%);
+
+    --equal2-bg: hsl(25, 98%, 40%);
+    --equal2-shadow: hsl(25, 99%, 27%);
+
+    --btn2-bg: hsl(45, 7%, 89%);
+    --btn2-shadow: hsl(35, 11%, 61%);
+
+    --text2-gray: hsl(60, 10%, 19%);
+    --text2-white: hsl(0, 0%, 100%);
+
+    /* Third Theme -------------------------------- */
+
+    --main3-bg: hsl(268, 75%, 9%);
+    --pad3-bg: hsl(268, 71%, 12%);
+
+
+    --reset3-bg: hsl(281, 89%, 26%);
+    --reset3-shadow: hsl(285, 91%, 52%);
+
+    --equal3-bg: hsl(176, 100%, 44%);
+    --equal3-shadow: hsl(177, 92%, 70%);
+
+    --btn3-bg: hsl(268, 47%, 21%);
+    --btn3-shadow: hsl(290, 70%, 36%);
+
+    --text3-yellow: hsl(52, 100%, 62%);
+    --text3-darkblue: hsl(198, 20%, 13%);
+    --text3-white: hsl(0, 0%, 100%);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+
+button {
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: none;
+}
+
+.heading {
+    margin-top: 10rem;
+}
+.heading .container {
+    max-width: 480px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .in-left {
+    margin-top: 1.4rem;
+}
+.container .right {
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.container ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    width: 48px;
+    margin: 0 auto;
+}
+
+.container .switch-body {
+    padding: 12px 34px;
+    margin-top: 4px;
+    border-radius: 12px;
+    position: relative;
+}
+.container .switch-slider {
+    padding: 8px;
+    border-radius: 8px;
+    position: absolute;
+    top: 4px;
+    left: 8%;
+}
+
+/* Input Field Section ------------------------------------------------------------------------------------------------------- */
+
+.input .container {
+    max-width: 480px;
+    margin: 2rem auto;
+}
+.input input{
+    width: 480px;
+    padding: 2rem 6px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    text-align: right;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Numpad Section ------------------------------------------------------------------------------------------------------- */
+
+
+.numpad .container {
+    width: 480px;
+    margin: 0rem auto;
+}
+
+.number-bg {
+    padding: 14rem 12rem;
+    position: relative;
+    border-radius: 12px;
+}
+.numpad ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    position: absolute;
+    top: 6%;
+    left: 6%;
+}
+
+.numpad li button {
+    width: 100%;
+    font-size: 36px;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 1rem 2.3rem;
+    border: none;
+}
+.numpad li.del button {
+    padding: 1rem 1rem;
+    color: var(--text-white);
+}
+
+.numpad ul.actions {
+    width: 424px;
+    display: flex;
+    justify-content: space-between;
+    top: 80%;
+}
+.numpad li.reset button {
+    width: 204px;
+    color: var(--text-white);
+}
+
+.numpad li.equal button {
+    width: 204px;
+    color: var(--text-white);
+    box-shadow: 0px 4px 0px var(--equal-shadow);
+}
+
+
+/* First Theme------------------------------------------- */
+
+
+.theme-body-1 {
+    background-color: var(--main-bg);
+    color: var(--text-white);
+}
+.toggle-btn-1 {
+    color: var(--text-white);
+}
+
+.switch-body-1 {
+    background-color: var(--pad-bg);
+}
+.switch-slider-1 {
+    background-color: var(--equal-bg);
+}
+
+.input-number-1 {
+    background-color: var(--input-bg);
+    color: var(--text-white);
+}
+
+.number-bg-1 {
+    background-color: var(--pad-bg);
+}
+.numpad-numbers-1 {
+    color: var(--text-gray);
+    box-shadow: 0px 4px 0px var(--btn-shadow);
+    background-color: var(--btn-bg);
+}
+.del-btn-1 {
+    background-color: var(--reset-bg);
+    box-shadow: 0px 4px 0px var(--reset-shadow);
+
+}
+.reset-btn-1 {
+    background-color: var(--reset-bg);
+    box-shadow: 0px 4px 0px var(--reset-shadow);
+}
+
+.equal-btn-1 {
+    width: 204px;
+    background-color: var(--equal-bg);
+    box-shadow: 0px 4px 0px var(--equal-shadow);
+}
+
+
+
+
+/* Second Theme------------------------------------------- */
+
+
+.theme-body-2 {
+    background-color: var(--main2-bg);
+    color: var(--text2-gray);
+}
+
+.toggle-btn-2 {
+    color: var(--text2-gray);
+}
+
+.switch-body-2 {
+    background-color: var(--pad2-bg);
+}
+.switch-slider-2 {
+    background-color: var(--equal2-bg);
+    left: 35% !important;
+}
+
+.input-number-2 {
+    background-color: var(--input2-bg);
+    color: var(--text2-gray);
+}
+
+.number-bg-2 {
+    background-color: var(--pad2-bg);
+}
+
+.numpad-numbers-2 {
+    color: var(--text-gray);
+    box-shadow: 0px 4px 0px var(--btn-shadow);
+    background-color: var(--btn-bg);
+}
+
+.del-btn-2 {
+    border-radius: 8px;
+    background-color: var(--reset2-bg);
+    box-shadow: 0px 4px 0px var(--reset2-shadow);
+}
+.reset-btn-2 {
+    border-radius: 8px;
+    background-color: var(--reset2-bg);
+    box-shadow: 0px 4px 0px var(--reset2-shadow);
+}
+
+.equal-btn-2 {
+    border-radius: 8px;
+    background-color: var(--equal2-bg);
+    box-shadow: 0px 4px 0px var(--equal2-shadow);
+}
+
+
+
+
+/* Thrid Theme------------------------------------------- */
+
+
+.theme-body-3 {
+    background-color: var(--main3-bg);
+    color: var(--text3-yellow);
+}
+.toggle-btn-3 {
+    color: var(--text3-yellow);
+}
+
+.switch-body-3 {
+    background-color: var(--pad3-bg);
+}
+.switch-slider-3 {
+    background-color: var(--equal3-bg);   
+    left: 68% !important;
+}
+
+.input-number-3 {
+    background-color: var(--pad3-bg);
+    color: var(--text3-yellow);
+}
+
+.number-bg-3 {
+    background-color: var(--pad3-bg);
+}
+.numpad-numbers-3 {
+    border-radius: 8px;
+    color: var(--text3-yellow); 
+    background-color: var(--btn3-bg);
+    box-shadow: 0px 4px 0px var(--btn3-shadow);
+}
+.del-btn-3 {
+    border-radius: 8px;
+    background-color: var(--reset3-bg);
+    box-shadow: 0px 4px 0px var(--reset3-shadow);
+
+}
+.reset-btn-3 {
+    border-radius: 8px;
+    background-color: var(--reset3-bg);
+    box-shadow: 0px 4px 0px var(--reset3-shadow);
+}
+
+.equal-btn-3 {
+    border-radius: 8px;
+    color: var(--text3-darkblue) !important;
+    background-color: var(--equal3-bg);
+    box-shadow: 0px 4px 0px var(--equal3-shadow) !important;
+}
+
